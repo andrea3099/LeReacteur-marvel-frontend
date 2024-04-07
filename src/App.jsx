@@ -28,11 +28,14 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/user/favorites", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/user/favorites`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setUserData(response.data);
       setCharactersFav(response.data.favCharacters);
       setComicsFav(response.data.favComics);

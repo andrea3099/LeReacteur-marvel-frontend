@@ -13,13 +13,16 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/comics", {
-          params: {
-            limit: limit,
-            skip: skip,
-            title: search,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/comics`,
+          {
+            params: {
+              limit: limit,
+              skip: skip,
+              title: search,
+            },
+          }
+        );
         // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -83,7 +86,7 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
                   onClick={async () => {
                     try {
                       const response = await axios.put(
-                        "http://localhost:3000/user/favorites/comics",
+                        `${import.meta.env.VITE_API_URL}/user/favorites/comics`,
                         {
                           id: comics._id,
                           comics_title: comics.title,
@@ -116,7 +119,9 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
                         onClick={async () => {
                           try {
                             const response = await axios.put(
-                              "http://localhost:3000/user/favorites/comics",
+                              `${
+                                import.meta.env.VITE_API_URL
+                              }/user/favorites/comics`,
                               {
                                 id: comics._id,
                                 comics_title: comics.title,

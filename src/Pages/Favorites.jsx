@@ -7,11 +7,14 @@ const Favorites = ({ token, favoritesAdd }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/user/favorites", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/user/favorites`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setData(response.data);
       setIsLoading(false);
       console.log(response.data.favComics);

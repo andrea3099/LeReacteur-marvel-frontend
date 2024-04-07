@@ -18,13 +18,16 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/characters`, {
-          params: {
-            limit: limit,
-            skip: skip,
-            name: search,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/characters`,
+          {
+            params: {
+              limit: limit,
+              skip: skip,
+              name: search,
+            },
+          }
+        );
         setData(response.data);
         setIsLoading(false);
         setCount(response.data.count);
@@ -78,7 +81,9 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
                   onClick={async () => {
                     try {
                       const response = await axios.put(
-                        "http://localhost:3000/user/favorites/characters",
+                        `${
+                          import.meta.env.VITE_API_URL
+                        }/user/favorites/characters`,
                         {
                           id: character._id,
                           characters_name: character.name,
@@ -110,7 +115,9 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
                         onClick={async () => {
                           try {
                             const response = await axios.put(
-                              "http://localhost:3000/user/favorites/characters",
+                              `${
+                                import.meta.env.VITE_API_URL
+                              }/user/favorites/characters`,
                               {
                                 id: character._id,
                                 characters_name: character.name,
