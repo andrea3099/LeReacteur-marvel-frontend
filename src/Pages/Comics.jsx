@@ -14,7 +14,7 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/comics`,
+          `${import.meta.env.VITE_API_URL}comics`,
           {
             params: {
               limit: limit,
@@ -86,7 +86,7 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
                   onClick={async () => {
                     try {
                       const response = await axios.put(
-                        `${import.meta.env.VITE_API_URL}/user/favorites/comics`,
+                        `${import.meta.env.VITE_API_URL}user/favorites/comics`,
                         {
                           id: comics._id,
                           comics_title: comics.title,
@@ -121,7 +121,7 @@ const Comics = ({ setSearch, search, token, comicsFav }) => {
                             const response = await axios.put(
                               `${
                                 import.meta.env.VITE_API_URL
-                              }/user/favorites/comics`,
+                              }user/favorites/comics`,
                               {
                                 id: comics._id,
                                 comics_title: comics.title,

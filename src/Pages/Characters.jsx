@@ -19,7 +19,7 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/characters`,
+          `${import.meta.env.VITE_API_URL}characters`,
           {
             params: {
               limit: limit,
@@ -83,7 +83,7 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
                       const response = await axios.put(
                         `${
                           import.meta.env.VITE_API_URL
-                        }/user/favorites/characters`,
+                        }user/favorites/characters`,
                         {
                           id: character._id,
                           characters_name: character.name,
@@ -117,7 +117,7 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
                             const response = await axios.put(
                               `${
                                 import.meta.env.VITE_API_URL
-                              }/user/favorites/characters`,
+                              }user/favorites/characters`,
                               {
                                 id: character._id,
                                 characters_name: character.name,

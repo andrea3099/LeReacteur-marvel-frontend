@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/user/favorites`,
+        `${import.meta.env.VITE_API_URL}user/favorites`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

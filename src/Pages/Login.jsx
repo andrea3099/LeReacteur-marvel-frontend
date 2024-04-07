@@ -20,7 +20,7 @@ const Login = ({ setToken, setUserId }) => {
           try {
             event.preventDefault();
             const response = await axios.post(
-              `${import.meta.env.VITE_API_URL}/user/login`,
+              `${import.meta.env.VITE_API_URL}user/login`,
               {
                 email: email,
                 password: password,
