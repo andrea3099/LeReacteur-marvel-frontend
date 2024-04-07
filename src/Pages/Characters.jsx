@@ -69,7 +69,7 @@ const Characters = ({ search, setSearch, token, charactersFav }) => {
       </div>
       <section className="container-characters">
         {data.results.map((character) => {
-          const routeCharacterId = `/character/${character._id}`;
+          const routeCharacterId = `/comics/${character._id}`;
           const picture =
             `${character.thumbnail.path}/portrait_uncanny` +
             `.${character.thumbnail.extension}`;
