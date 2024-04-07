@@ -1,0 +1,415 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-transform: uppercase;
+  font-family: "Roboto condensed", sans-serif;
+  font-weight: bold;
+}
+.center {
+  width: 1280px;
+  margin: 0 auto;
+}
+.link {
+  text-decoration: none;
+  color: #e6171f;
+}
+
+/* ------------------------------HEADER----------------------- */
+header {
+  background-color: #181818;
+  height: 100px;
+  display: flex;
+  border-bottom: solid 3px #e6171f;
+  position: sticky;
+  z-index: 1;
+}
+.container-logo-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-container > img {
+  object-fit: cover;
+  width: 65%;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+.nav-container .link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6171f;
+  text-align: center;
+  flex: 1;
+  height: 50px;
+}
+.nav-container .menu-nav:hover {
+  background-color: #e6171f;
+  border-radius: 5px;
+  color: white;
+}
+
+/* ------------------------------MAIN----------------------- */
+
+/* HOME  */
+.main-home-container {
+  background-image: url("./images/planche-comics.jpg");
+  background-position: left;
+}
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 85px;
+}
+.image-home-container {
+  position: relative;
+  background-color: rgba(24, 24, 24, 0.705);
+  display: flex;
+  box-shadow: 5px 5px 40px #181818, -1em 0 10em #181818;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 75px;
+  width: 85%;
+  height: 70%;
+}
+.image-home-container > img {
+  object-fit: cover;
+}
+.div-survol {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.div-survol div:first-child {
+  width: 34%;
+  height: 100%;
+}
+.div-survol div:last-child {
+  width: 34%;
+  height: 100%;
+}
+.div-survol div {
+  width: 32%;
+  height: 100%;
+}
+
+.div-survol div:hover {
+  background-color: #d8d8d8;
+  opacity: 0.2;
+  flex: 1;
+}
+
+/* COMICS  */
+
+.container-comics {
+  background-color: #181818;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #d8d8d8;
+  gap: 17px;
+  padding-top: 20px;
+}
+.div-comic {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  position: relative;
+  background-color: #181818;
+  border: solid 5px #d8d8d8;
+  border-radius: 30px;
+}
+.picture {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  margin: 10px;
+  margin-top: 17px;
+  border-bottom: solid 10px #181818;
+  text-align: left;
+  height: 40px;
+}
+.description {
+  text-align: center;
+  margin: 15px;
+  background-color: #d8d8d8;
+  color: #181818;
+  border: solid 1px #181818;
+}
+.separator {
+  background-color: #e6171f;
+}
+.content {
+  padding: 10px;
+  line-height: 17px;
+}
+.div-comic > div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.div-comic span:last-child {
+  font-size: 20px;
+}
+.favoris {
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.white {
+  color: #d8d8d8;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+}
+.red {
+  color: #e6171f;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+}
+.search-paginate {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  border-bottom: solid 1px #d8d8d8;
+}
+.research-bar {
+  margin: 10px;
+  height: 30px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: solid 1px gray;
+  padding: 10px;
+  background-color: #d8d8d8;
+}
+.research-bar input {
+  border: none;
+  background-color: #d8d8d8;
+  outline: none;
+}
+.page-number {
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  gap: 3px;
+  margin-right: 30px;
+}
+.page-number button {
+  background-color: #d8d8d8;
+  border-radius: 7px;
+  border: none;
+}
+/* CHARACTERS  */
+
+.container-characters {
+  background-color: #181818;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 17px;
+}
+.favoris-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 550px;
+  position: relative;
+  border: solid 5px #d8d8d8;
+  border-radius: 30px;
+}
+.name {
+  padding-left: 10px;
+}
+.div-character {
+  display: flex;
+  flex-direction: column;
+  color: #d8d8d8;
+}
+.div-character > div {
+  display: flex;
+  justify-content: center;
+}
+.div-character span:last-child {
+  font-size: 10px;
+}
+
+/* CHARACTER  */
+
+.character-comics-div {
+  background-color: #181818;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.character-comics-img {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex: 2;
+}
+.character-comics-img > img {
+  border-radius: 10px;
+  border: solid 10px #d8d8d8;
+}
+.character-comics-div > div:last-child {
+  flex: 3;
+}
+.info-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  height: 200px;
+  text-align: center;
+  padding: 20px;
+  color: #d8d8d8;
+  font-size: 20px;
+  border-radius: 10px;
+  border: solid 5px #d8d8d8;
+}
+
+.comics-character-div {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  border-bottom: solid 5px #e6171f;
+  border-top: solid 5px #e6171f;
+  background-color: #d8d8d8;
+  padding: 5px;
+}
+
+.comics-character-div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #181818;
+  color: #d8d8d8;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* FAVORITES  */
+.favorites-content {
+  background-color: #181818;
+  color: #d8d8d8;
+}
+.list-favoris {
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+.favoris-container {
+  display: flex;
+  padding: 10px;
+  height: 600px;
+}
+.favorites-comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+/* SIGNUP/LOGIN  */
+
+.container-signup {
+  background-color: #e6171f;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  font-size: 20px;
+  text-align: center;
+}
+.container-signup input {
+  border: none;
+  background-color: #d8d8d8;
+  height: 40px;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Roboto condensed", sans-serif;
+  font-weight: bold;
+}
+.container-signup button {
+  border: none;
+  background-color: #d8d8d8;
+  height: 40px;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Roboto condensed", sans-serif;
+  font-weight: bold;
+}
+.container-signup button:hover {
+  background-color: #181818;
+  color: #d8d8d8;
+}
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.signup-link {
+  color: #181818;
+}
+/* ------------------------------FOOTER----------------------- */
+
+.footer-container {
+  height: 80px;
+  background-color: #181818;
+  color: white;
+}
